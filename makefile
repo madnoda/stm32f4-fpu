@@ -73,7 +73,7 @@ LIBRARY_DIRS = $(addprefix -L,$(LIBPATHS))
 MATH_LIB	 =	-lm
 
 # LinkerScript PATH
-LINKER_PATH = ../STM32F407ZGT6_FatFS_DISP_20120425/lib/linker
+LINKER_PATH = ./linker
 LINKER_DIRS = $(addprefix -L,$(LINKER_PATH)) 
 
 # Object definition
