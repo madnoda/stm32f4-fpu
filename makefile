@@ -16,7 +16,7 @@ USING_FPU		= -mfloat-abi=softfp  -mfpu=fpv4-sp-d16
 # Apprication Version
 APP_VER = W.I.P
 
-SUBMODEL		= STM32F405RGT6
+SUBMODEL		= STM32F4XX
 
 MPU_DENSITY		= STM32F4xx
 HSE_CLOCK 		= 8000000
@@ -52,9 +52,9 @@ TARGET_LSS  = $(TARGET).lss
 TARGET_SYM  = $(TARGET).sym
 
 # define Cortex-M4 LIBRARY PATH
-FWLIB  		= ../STM32F4-Discovery_FW_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver
-CM4LIB 		= ../STM32F4-Discovery_FW_V1.1.0/Libraries/CMSIS/
-CM4_DEVICE 	= $(CM4LIB)/ST/STM32F4xx
+FWLIB  		= ../STM32F4xx_DSP_StdPeriph_Lib_V1.1.0/Libraries/STM32F4xx_StdPeriph_Driver
+CM4LIB 		= ../STM32F4xx_DSP_StdPeriph_Lib_V1.1.0/Libraries/CMSIS
+CM4_DEVICE 	= $(CM4LIB)/Device/ST/STM32F4xx
 CM4_CORE	= $(CM4LIB)/Include
 
 # include PATH
@@ -97,7 +97,7 @@ SFILES += \
 	$(SOURCE)/startup_stm32f4xx_rtos.s
 else
 SFILES += \
-	$(STARTUP_DIR)/startup_stm32f4xx.s
+	$(STARTUP_DIR)/startup_stm32f40xx.s
 endif
 
 #/*----- STM32 library PATH -----*/
